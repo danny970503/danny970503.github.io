@@ -1,0 +1,142 @@
+@media screen and (min-width:728px){
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+html {
+        scroll-behavior: smooth;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        color: #000000;
+        font-family: 'Noto Sans Japanese', sans-serif;
+        margin: 0;
+        background-color: #ffffff;
+    }
+    
+    h2 {
+        color: #000000;
+        font-weight: normal;
+        margin: 20px 0;
+    }
+    section {
+        font-size: 30px;
+        width: 100%;
+        padding: 10px 0px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+    }
+
+
+    .center{
+        text-align: center;
+    }
+    .center a{
+        text-decoration:none;
+        color:rgb(0, 0, 0);
+    }
+
+    header {
+        width: 100%;
+        padding: 10px 30px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;/*上下居中*/
+        position: sticky;
+        top: 0px;
+        z-index: 9999;
+        
+    }
+    header a {
+        color: rgb(0, 0, 0);
+        display: block;
+        text-decoration: none;
+    }
+    header h1 {
+        margin-right: auto;/*讓 menu 到右邊去*/
+    }
+    
+    ul.menu {
+        display: flex; /*讓選單橫排*/
+        list-style: none;/*清除圓點*/
+        margin: 0;/*清除 ul 額外空間*/
+        padding: 0;/*清除 ul 額外空間*/
+        gap: 12px;
+    }
+    ul.menu a {
+        /*超連結的正常狀態*/
+        padding: 10px 20px;
+    }
+
+    
+
+    /*燈箱效果*/
+    .portfolio {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;/*讓超出寬度的內容折行*/
+        width: 640px;/*這個寬度等於三張圖加上兩個 Gap 的總寬*/
+        margin-inline: auto;/*區塊居中設定*/
+    }
+    .portfolio a {
+        display: block;/*因為超連結不是區塊所以．．．*/
+        overflow: hidden;/*隱藏超出範圍的內容*/
+        transition: 0.2s;/*轉場效果*/
+    }
+    .portfolio a:hover {
+        box-shadow: 0 0 0 8px rgb(255, 255, 255);/*製作滑鼠移上去的紅色外框*/
+    }
+
+    .portfolio img {
+        display: block;/*因為圖片不是區塊所以．．．*/
+        width: 200px; height: 200px;/*設定圖片尺寸*/
+        object-fit: cover;/*讓圖片寬度套用上述尺寸(因為原圖比較大)*/
+        opacity: 0.7;/*設定透明度*/
+        transition: 0.2s;/*轉場效果*/
+    }
+    .portfolio a:hover img {
+        opacity: 1;/*設定滑鼠移上去之後的透明度*/
+        transform: scale(1.2);/*設定滑鼠移上去之後的圖片大小*/
+    }
+
+    .lb-data .lb-caption {
+        font-size: 16px;
+    }
+    a.top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px; height: 60px;
+        color: #000000;
+        font-size: 25px;
+        text-decoration: none;
+        background-color: rgb(255, 255, 255);
+        border-radius: 30px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 9999;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    }
+    a.top:hover {
+    background-color: #ccc;
+    }
+    
+    footer{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding: 10px 30px;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;/*上下居中*/
+    position: sticky;
+    }
+    footer a {
+        color: rgb(255, 255, 255);
+        display: block;
+        text-decoration: none;
+    }
+    footer h1 {
+        margin-right: 320px;/*讓 menu 到右邊去*/
+    }
+}
